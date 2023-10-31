@@ -47,13 +47,10 @@
 			<div class="top-bar">
 				<div class="content-topbar flex-sb-m h-full container">
 					<div class="left-top-bar">
-						고구마
+						룩북 페이지
 					</div>
 
 					<div class="right-top-bar flex-w h-full">
-						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							Help & FAQs
-						</a>
 
 						<a href="#" class="flex-c-m trans-04 p-lr-25">
 							로그인
@@ -63,7 +60,7 @@
 							마이페이지
 						</a>
 
-						<a href="#" class="flex-c-m trans-04 p-lr-25">
+						<a href="customerService.jsp" class="flex-c-m trans-04 p-lr-25">
 							고객센터
 						</a>
 					</div>
@@ -74,7 +71,7 @@
 				<nav class="limiter-menu-desktop container">
 					
 					<!-- Logo desktop -->		
-					<a href="#" class="logo">
+					<a href="index.jsp" class="logo">
 						<img src="resources/images/icons/logo-01.png" alt="IMG-LOGO">
 					</a>
 
@@ -88,15 +85,15 @@
 							</li>
 
 							<li >
-								<a href="lookbook.jsp">shop</a>
+								<a href="product.jsp">shop</a>
 							</li>
 
 							<li class="label1" data-label1="hot">
-								<a href="shoping-cart.jsp">렌탈하기(임시)</a>
+								<a href="#">렌탈하기(임시)</a>
 							</li>
 
 							<li class="active-menu">
-								<a href="blog.jsp">LookBook</a>
+								<a href="lookbook.jsp">LookBook</a>
 							</li>
 
 							<li>
@@ -115,8 +112,9 @@
 							<i class="zmdi zmdi-search"></i>
 						</div>
 
-						<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart" data-notify="2">
+						<a href="shoping-cart.jsp" div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart" data-notify="2">
 							<i class="zmdi zmdi-shopping-cart"></i>
+							</a>
 						</div>
 
 						<a href="#" class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti" data-notify="0">
@@ -1299,9 +1297,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		$('.js-addwish-b2, .js-addwish-detail').on('click', function(e){
 			e.preventDefault();
 		});
-
+ 
 		$('.js-addwish-b2').each(function(){
-			var nameProduct = $(this).parent().parent().find('.js-name-b2').jsp();
+			var nameProduct = $(this).parent().parent().find('.js-name-b2').html();
 			$(this).on('click', function(){
 				swal(nameProduct, "is added to wishlist !", "success");
 
@@ -1311,7 +1309,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		});
 
 		$('.js-addwish-detail').each(function(){
-			var nameProduct = $(this).parent().parent().parent().find('.js-name-detail').jsp();
+			var nameProduct = $(this).parent().parent().parent().find('.js-name-detail').html();
 
 			$(this).on('click', function(){
 				swal(nameProduct, "is added to wishlist !", "success");
@@ -1324,7 +1322,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		/*---------------------------------------------*/
 
 		$('.js-addcart-detail').each(function(){
-			var nameProduct = $(this).parent().parent().parent().parent().find('.js-name-detail').jsp();
+			var nameProduct = $(this).parent().parent().parent().parent().find('.js-name-detail').html();
 			$(this).on('click', function(){
 				swal(nameProduct, "is added to cart !", "success");
 			});
