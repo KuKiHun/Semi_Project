@@ -52,11 +52,11 @@
 
 					<div class="right-top-bar flex-w h-full">
 
-						<a href="#" class="flex-c-m trans-04 p-lr-25">
+						<a href="login.jsp" class="flex-c-m trans-04 p-lr-25">
 							로그인
 						</a>
 
-						<a href="#" class="flex-c-m trans-04 p-lr-25">
+						<a href="mypage.jsp" class="flex-c-m trans-04 p-lr-25">
 							마이페이지
 						</a>
 
