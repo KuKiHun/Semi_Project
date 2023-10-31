@@ -60,7 +60,23 @@
 	width: 170px;
 	height: auto;
 }
+
+#password {
+	margin-bottom: 0px;
+}
+
+/* 로그인 버튼 스타일 */
+#loginButton {
+	margin-top: 20px;
+	margin-bottom: 20px; /* 오른쪽 마진을 추가하여 간격을 벌립니다 */
+}
+
+/* 회원가입 버튼 스타일 */
+#signupButton {
+	margin-top: 10px; /* 왼쪽 마진을 추가하여 간격을 벌립니다 */
+}
 </style>
+
 
 </head>
 <body class="animsition">
@@ -265,7 +281,7 @@
 	<!-- Title page -->
 	<section class="bg-img1 txt-center p-lr-15 p-tb-92" id="bgimage"
 		style="background-image: url('resources/images/bg-01.jpg');">
-		<h2 class="ltext-105 cl0 txt-center">Sign Up</h2>
+		<h2 class="ltext-105 cl0 txt-center">Login</h2>
 	</section>
 
 
@@ -282,14 +298,20 @@
 						<div class="bor8 m-b-20 how-pos4-parent">
 							<input
 								class="stext-111 cl2 plh3 size-121 
-							 p-l-15 p-r-20"
+							 p-l-15 p-r-20" id="id"
 								type="text" name="id" placeholder="아이디를 입력하세요.">
 						</div>
 
 						<div class="bor8 m-b-30">
 							<input class="stext-111 cl2 plh3 size-121
-							 p-l-15 p-r-20"
+							 p-l-15 p-r-20" id="password"
 								type="password" name="password" placeholder="패스워드를 입력하세요"></input>
+						</div>
+						<div class="m-t-20" style="text-align: right">
+							<a href="find_id.jsp" class="stext-111 cl2">아이디 찾기  /  </a>
+							<!-- 아이디 찾기 링크 추가 -->
+							<a href="find_password.jsp" class="stext-111 cl2"> 비밀번호 찾기</a>
+							<!-- 비밀번호 찾기 링크 추가 -->
 						</div>
 
 						<button id="loginButton"
@@ -347,15 +369,15 @@
 		</div>
 	</section>
 	<script>
-        // 버튼 요소를 찾아냅니다.
-        var signupButton = document.getElementById("signupButton");
+		// 버튼 요소를 찾아냅니다.
+		var signupButton = document.getElementById("signupButton");
 
-        // 버튼을 클릭할 때 페이지를 이동하도록 이벤트 리스너를 추가합니다.
-        signupButton.addEventListener("click", function() {
-            // 원하는 페이지 URL로 이동합니다.
-            window.location.href = "signUp.jsp";
-        });
-    </script>
+		// 버튼을 클릭할 때 페이지를 이동하도록 이벤트 리스너를 추가합니다.
+		signupButton.addEventListener("click", function() {
+			// 원하는 페이지 URL로 이동합니다.
+			window.location.href = "signUp.jsp";
+		});
+	</script>
 
 	<!-- Map -->
 	<div class="map">
@@ -461,7 +483,9 @@
 				<p class="stext-107 cl6 txt-center">
 					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 					Copyright &copy;
-					<script>document.write(new Date().getFullYear());</script>
+					<script>
+						document.write(new Date().getFullYear());
+					</script>
 					All rights reserved | Made with <i class="fa fa-heart-o"
 						aria-hidden="true"></i> by <a href="https://colorlib.com"
 						target="_blank">Colorlib</a> &amp; distributed by <a
@@ -491,10 +515,10 @@
 	<!--===============================================================================================-->
 	<script src="resources/vendor/select2/select2.min.js"></script>
 	<script>
-		$(".js-select2").each(function(){
+		$(".js-select2").each(function() {
 			$(this).select2({
-				minimumResultsForSearch: 20,
-				dropdownParent: $(this).next('.dropDownSelect2')
+				minimumResultsForSearch : 20,
+				dropdownParent : $(this).next('.dropDownSelect2')
 			});
 		})
 	</script>
@@ -505,16 +529,16 @@
 	<script
 		src="resources/vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
 	<script>
-		$('.js-pscroll').each(function(){
-			$(this).css('position','relative');
-			$(this).css('overflow','hidden');
+		$('.js-pscroll').each(function() {
+			$(this).css('position', 'relative');
+			$(this).css('overflow', 'hidden');
 			var ps = new PerfectScrollbar(this, {
-				wheelSpeed: 1,
-				scrollingThreshold: 1000,
-				wheelPropagation: false,
+				wheelSpeed : 1,
+				scrollingThreshold : 1000,
+				wheelPropagation : false,
 			});
 
-			$(window).on('resize', function(){
+			$(window).on('resize', function() {
 				ps.update();
 			})
 		});
