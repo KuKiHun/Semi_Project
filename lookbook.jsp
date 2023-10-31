@@ -90,24 +90,24 @@
 								</ul>
 							</li>
 
-							<li class="active-menu">
-								<a href="lookbook.html">룩북</a>
+							<li >
+								<a href="lookbook.html">shop</a>
 							</li>
 
 							<li class="label1" data-label1="hot">
-								<a href="shoping-cart.html">Features</a>
+								<a href="shoping-cart.html">렌탈하기(임시)</a>
+							</li>
+
+							<li class="active-menu">
+								<a href="blog.html">LookBook</a>
 							</li>
 
 							<li>
-								<a href="blog.html">Blog</a>
+								<a href="about.html">이용방법안내</a>
 							</li>
 
 							<li>
-								<a href="about.html">About</a>
-							</li>
-
-							<li>
-								<a href="contact.html">Contact</a>
+								<a href="contact.html">커뮤니티</a>
 							</li>
 						</ul>
 					</div>	
