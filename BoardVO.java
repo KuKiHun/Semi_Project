@@ -1,4 +1,4 @@
-package com.javassem.vo;
+package com.javaclass.vo;
 
 public class BoardVO {
 
