@@ -47,7 +47,7 @@
 			<div class="top-bar">
 				<div class="content-topbar flex-sb-m h-full container">
 					<div class="left-top-bar">
-						메인 페이지 
+						Rent it, Wear it 
 					</div>
 
 					<div class="right-top-bar flex-w h-full">
@@ -60,7 +60,7 @@
 							마이페이지
 						</a>
 
-						<a href="customerService.jsp" class="flex-c-m trans-04 p-lr-25">
+						<a href="#" class="flex-c-m trans-04 p-lr-25">
 							고객센터
 						</a>
 					</div>
@@ -79,19 +79,19 @@
 					<div class="menu-desktop">
 						<ul class="main-menu">
 							<li class="active-menu">
-								<a href="index.jsp">Home</a>
+								<a href="index.jsp">홈</a>
 							</li>
 
 							<li>
-								<a href="product.jsp">shop</a>
-							</li>
-
-							<li class="label1" data-label1="hot">
-								<a href="#">렌탈하기(임시)</a>
+								<a href="product.jsp">구매</a>
 							</li>
 
 							<li>
-								<oa href="lookbok.jsp">LookBook</a>
+								<a href="#">렌탈</a>
+							</li>
+
+							<li>
+								<a href="lookbook.jsp">룩북</a>
 							</li>
 
 							<li>
@@ -100,9 +100,14 @@
 
 							<li>
 								<a href="contact.jsp">커뮤니티</a>
+								<ul class="sub-menu">
+									<li><a href="index.html">전체 글 보기</a></li>
+									<li><a href="home-02.html">내 글 보기</a></li>
+								</ul>
 							</li>
 						</ul>
 					</div>	
+					
 
 					<!-- Icon header -->
 					<div class="wrap-icon-header flex-w flex-r-m">
@@ -313,26 +318,26 @@
 		<div class="container">
 			<div class="p-b-10">
 				<h3 class="ltext-103 cl5">
-					Products
+					상품
 				</h3>
 			</div>
 
 			<div class="flex-w flex-sb-m p-b-52">
 				<div class="flex-w flex-l-m filter-tope-group m-tb-10">
 					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 how-active1" data-filter="*">
-						All Products
+						모든 상품
 					</button>
 
 					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".women">
-						Women
+						여성
 					</button>
 
 					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".men">
-						Men
+						남성
 					</button>
 
 					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".bag">
-						Bag
+						가방
 					</button>
 
 				</div>
@@ -557,10 +562,8 @@
 					<!-- Block2 -->
 					<div class="block2">
 						<div class="block2-pic hov-img0">
+							<a href="product-detail.jsp">
 							<img src="resources/images/product-01.jpg" alt="IMG-PRODUCT">
-
-							<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-								Quick View
 							</a>
 						</div>
 
@@ -590,10 +593,6 @@
 					<div class="block2">
 						<div class="block2-pic hov-img0">
 							<img src="resources/images/product-02.jpg" alt="IMG-PRODUCT">
-
-							<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-								Quick View
-							</a>
 						</div>
 
 						<div class="block2-txt flex-w flex-t p-t-14">
@@ -622,10 +621,6 @@
 					<div class="block2">
 						<div class="block2-pic hov-img0">
 							<img src="resources/images/product-03.jpg" alt="IMG-PRODUCT">
-
-							<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-								Quick View
-							</a>
 						</div>
 
 						<div class="block2-txt flex-w flex-t p-t-14">
@@ -654,10 +649,6 @@
 					<div class="block2">
 						<div class="block2-pic hov-img0">
 							<img src="resources/images/product-04.jpg" alt="IMG-PRODUCT">
-
-							<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-								Quick View
-							</a>
 						</div>
 
 						<div class="block2-txt flex-w flex-t p-t-14">
@@ -686,10 +677,6 @@
 					<div class="block2">
 						<div class="block2-pic hov-img0">
 							<img src="resources/images/product-05.jpg" alt="IMG-PRODUCT">
-
-							<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-								Quick View
-							</a>
 						</div>
 
 						<div class="block2-txt flex-w flex-t p-t-14">
@@ -718,10 +705,6 @@
 					<div class="block2">
 						<div class="block2-pic hov-img0">
 							<img src="resources/images/product-06.jpg" alt="IMG-PRODUCT">
-
-							<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-								Quick View
-							</a>
 						</div>
 
 						<div class="block2-txt flex-w flex-t p-t-14">
@@ -750,10 +733,6 @@
 					<div class="block2">
 						<div class="block2-pic hov-img0">
 							<img src="resources/images/product-07.jpg" alt="IMG-PRODUCT">
-
-							<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-								Quick View
-							</a>
 						</div>
 
 						<div class="block2-txt flex-w flex-t p-t-14">
@@ -782,10 +761,6 @@
 					<div class="block2">
 						<div class="block2-pic hov-img0">
 							<img src="resources/images/product-08.jpg" alt="IMG-PRODUCT">
-
-							<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-								Quick View
-							</a>
 						</div>
 
 						<div class="block2-txt flex-w flex-t p-t-14">
@@ -814,10 +789,6 @@
 					<div class="block2">
 						<div class="block2-pic hov-img0">
 							<img src="resources/images/product-09.jpg" alt="IMG-PRODUCT">
-
-							<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-								Quick View
-							</a>
 						</div>
 
 						<div class="block2-txt flex-w flex-t p-t-14">
@@ -846,10 +817,6 @@
 					<div class="block2">
 						<div class="block2-pic hov-img0">
 							<img src="resources/images/product-10.jpg" alt="IMG-PRODUCT">
-
-							<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-								Quick View
-							</a>
 						</div>
 
 						<div class="block2-txt flex-w flex-t p-t-14">
@@ -878,10 +845,6 @@
 					<div class="block2">
 						<div class="block2-pic hov-img0">
 							<img src="resources/images/product-11.jpg" alt="IMG-PRODUCT">
-
-							<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-								Quick View
-							</a>
 						</div>
 
 						<div class="block2-txt flex-w flex-t p-t-14">
@@ -910,10 +873,6 @@
 					<div class="block2">
 						<div class="block2-pic hov-img0">
 							<img src="resources/images/product-12.jpg" alt="IMG-PRODUCT">
-
-							<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-								Quick View
-							</a>
 						</div>
 
 						<div class="block2-txt flex-w flex-t p-t-14">
@@ -942,10 +901,6 @@
 					<div class="block2">
 						<div class="block2-pic hov-img0">
 							<img src="resources/images/product-13.jpg" alt="IMG-PRODUCT">
-
-							<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-								Quick View
-							</a>
 						</div>
 
 						<div class="block2-txt flex-w flex-t p-t-14">
@@ -974,10 +929,6 @@
 					<div class="block2">
 						<div class="block2-pic hov-img0">
 							<img src="resources/images/product-14.jpg" alt="IMG-PRODUCT">
-
-							<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-								Quick View
-							</a>
 						</div>
 
 						<div class="block2-txt flex-w flex-t p-t-14">
@@ -1006,10 +957,6 @@
 					<div class="block2">
 						<div class="block2-pic hov-img0">
 							<img src="resources/images/product-15.jpg" alt="IMG-PRODUCT">
-
-							<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-								Quick View
-							</a>
 						</div>
 
 						<div class="block2-txt flex-w flex-t p-t-14">
@@ -1038,10 +985,6 @@
 					<div class="block2">
 						<div class="block2-pic hov-img0">
 							<img src="resources/images/product-16.jpg" alt="IMG-PRODUCT">
-
-							<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-								Quick View
-							</a>
 						</div>
 
 						<div class="block2-txt flex-w flex-t p-t-14">
@@ -1088,25 +1031,19 @@
 					<ul>
 						<li class="p-b-10">
 							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-								Women
+								여성
 							</a>
 						</li>
 
 						<li class="p-b-10">
 							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-								Men
+								남성
 							</a>
 						</li>
 
 						<li class="p-b-10">
 							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-								Shoes
-							</a>
-						</li>
-
-						<li class="p-b-10">
-							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-								Watches
+								가방
 							</a>
 						</li>
 					</ul>
@@ -1153,19 +1090,7 @@
 						Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879
 					</p>
 
-					<div class="p-t-27">
-						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-							<i class="fa fa-facebook"></i>
-						</a>
-
-						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-							<i class="fa fa-instagram"></i>
-						</a>
-
-						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-							<i class="fa fa-pinterest-p"></i>
-						</a>
-					</div>
+					
 				</div>
 
 				<div class="col-sm-6 col-lg-3 p-b-50">
@@ -1188,28 +1113,7 @@
 				</div>
 			</div>
 
-			<div class="p-t-40">
-				<div class="flex-c-m flex-w p-b-18">
-					<a href="#" class="m-all-1">
-						<img src="resources/images/icons/icon-pay-01.png" alt="ICON-PAY">
-					</a>
-
-					<a href="#" class="m-all-1">
-						<img src="resources/images/icons/icon-pay-02.png" alt="ICON-PAY">
-					</a>
-
-					<a href="#" class="m-all-1">
-						<img src="resources/images/icons/icon-pay-03.png" alt="ICON-PAY">
-					</a>
-
-					<a href="#" class="m-all-1">
-						<img src="resources/images/icons/icon-pay-04.png" alt="ICON-PAY">
-					</a>
-
-					<a href="#" class="m-all-1">
-						<img src="resources/images/icons/icon-pay-05.png" alt="ICON-PAY">
-					</a>
-				</div>
+			
 
 				<p class="stext-107 cl6 txt-center">
 					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
