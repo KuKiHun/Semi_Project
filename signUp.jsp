@@ -83,7 +83,7 @@
 					<a href="#" class="logo">
 						<img src="resources/images/icons/wearitLogo.png" alt="IMG-LOGO" id="logoimage">
 					</a>
-
+ 
 					<!-- Menu desktop -->
 					<div class="menu-desktop">
 						<ul class="main-menu">
@@ -105,7 +105,7 @@
 							</li>
 
 							<li>
-								<a href="blog.jsp">룩북</a>
+								<a href="lookbook.jsp">룩북</a>
 							</li>
 
 							<li>
@@ -280,27 +280,61 @@
 
 
 	<!-- Content page -->
-	<section class="bg0 p-t-104 p-b-116">
-		<div class="container">
-			<div class="flex-w flex-tr">
-				<div class="size-210 bor10 p-lr-70 p-t-55 p-b-70 p-lr-15-lg w-full-md">
-					<form>
-						<h4 class="mtext-105 cl2 txt-center p-b-30">
+	<section class="bg0 p-t-104 p-b-116 section-1" >
+				<div class="size-210 bor10 p-lr-70 p-t-55 p-b-70 p-lr-15-lg w-full-md" style="max-width:800px;">
+					<form action="" method="post">
+						<h4 class="mtext-115 cl2 txt-center p-b-30">
 							회원가입
 						</h4>
-						
-						<div class="bor8 m-b-20 how-pos4-parent">
-							<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="id" placeholder="아이디">
+						<label>아이디</label>
+						<div class="bor8 m-b-20 how-pos4-parent" >
+							<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="id" id="id">
 						</div>
+						<label>비밀번호</label>
 						<div class="bor8 m-b-20 how-pos4-parent">
-							<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="password" name="password" placeholder="비밀번호">
+							<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="password" name="password" id="password">
 						</div>
+						<label>비밀번호 확인</label>
 						<div class="bor8 m-b-20 how-pos4-parent">
-							<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="password" name="passcheck" placeholder="비밀번호 확인">
+							<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="password" name="passcheck" id="passcheck">
 						</div>
+						<label>이름</label>
+						<div class="bor8 m-b-20 how-pos4-parent" >
+							<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="name" id="name">
+						</div>
+						<label>성별</label>
+						<div style="display: flex; gap: 20px; margin-bottom: 20px; ">
+   							<input type="radio" name="gender" value="male" id="male">
+   							<label for="male">남자</label>
+
+  						 	<input type="radio" name="gender" value="female" id="female">
+  							<label for="female">여자</label>
+
+   						</div>
+						<label>생년월일</label>
+						<div class="bor8 m-b-20 how-pos4-parent" >
+						<input type="text" id="datepicker" class="form-control" name="birth" value="" />
+							
+						</div>
+						<label>닉네임</label>
+						<div class="bor8 m-b-20 how-pos4-parent">
+							<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="nickname" id="nickname">
+						</div>
+						<label>전화번호</label>
+						<div class="bor8 m-b-20 how-pos4-parent">
+							
+								<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" id="tel" type="text" name="tel" placeholder="'-' 빼고 입력해주세요">
+							
+							
+								<button class="flex-c-m stext-120 cl0 size-126 bg3 bor1 hov-btn3 p-lr-1 trans-04 pointer">
+									전화번호 인증
+								</button>
+							
+						</div>
+						<label>이메일</label>
 						<div class="bor8 m-b-20 how-pos4-parent">
 							<td>
-								<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="email" name="email" placeholder="이메일">
+								<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="email" name="email" id="email">
 							</td>
 							<td>
 								<button class="flex-c-m stext-120 cl0 size-126 bg3 bor1 hov-btn3 p-lr-1 trans-04 pointer">
@@ -308,88 +342,25 @@
 								</button>
 							</td>
 						</div>
-						
-						<div class="bor8 m-b-20 how-pos4-parent">
-							<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="nickname" placeholder="닉네임">
-						</div>
+						<label>주소</label>
 						<div class="bor8 m-b-20 how-pos4-parent">
 							<td>
-								<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="tel" placeholder="전화번호">
+								<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="addr" id="addr">
 							</td>
 							<td>
 								<button class="flex-c-m stext-120 cl0 size-126 bg3 bor1 hov-btn3 p-lr-1 trans-04 pointer">
-									전화번호 인증
+									주소 검색
 								</button>
 							</td>
 						</div>
 					
 
-						<button class="flex-c-m stext-101 cl0 size-121 bg3 bor1 hov-btn3 p-lr-15 trans-04 pointer">
+						<button type="submit" class="flex-c-m stext-101 cl0 size-121 bg3 bor1 hov-btn3 p-lr-15 trans-04 pointer" >
 							회원가입
 						</button>
 					</form>
 				</div>
-
-				<div class="size-210 bor10 flex-w flex-col-m p-lr-93 p-tb-30 p-lr-15-lg w-full-md">
-					<div class="flex-w w-full p-b-42">
-						<span class="fs-18 cl5 txt-center size-211">
-							<span class="lnr lnr-map-marker"></span>
-						</span>
-
-						<div class="size-212 p-t-2">
-							<span class="mtext-110 cl2">
-								Address
-							</span>
-
-							<p class="stext-115 cl6 size-213 p-t-18">
-								Coza Store Center 8th floor, 379 Hudson St, New York, NY 10018 US
-							</p>
-						</div>
-					</div>
-
-					<div class="flex-w w-full p-b-42">
-						<span class="fs-18 cl5 txt-center size-211">
-							<span class="lnr lnr-phone-handset"></span>
-						</span>
-
-						<div class="size-212 p-t-2">
-							<span class="mtext-110 cl2">
-								Lets Talk
-							</span>
-
-							<p class="stext-115 cl1 size-213 p-t-18">
-								+1 800 1236879
-							</p>
-						</div>
-					</div>
-
-					<div class="flex-w w-full">
-						<span class="fs-18 cl5 txt-center size-211">
-							<span class="lnr lnr-envelope"></span>
-						</span>
-
-						<div class="size-212 p-t-2">
-							<span class="mtext-110 cl2">
-								Sale Support
-							</span>
-
-							<p class="stext-115 cl1 size-213 p-t-18">
-								contact@example.com
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 	</section>	
-	
-	
-	<!-- Map -->
-	<div class="map">
-		<div class="size-303" id="google_map" data-map-x="40.691446" data-map-y="-73.886787" data-pin="resources/images/icons/pin.png" data-scrollwhell="0" data-draggable="1" data-zoom="11"></div>
-	</div>
-
-
 
 	<!-- Footer -->
 	<footer class="bg3 p-t-75 p-b-32">
@@ -587,4 +558,11 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="resources/js/main.js"></script>
 
 </body>
+
+<!--datepicker-->
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.9.2/i18n/jquery.ui.datepicker-ko.min.js"></script>
+
 </html>
