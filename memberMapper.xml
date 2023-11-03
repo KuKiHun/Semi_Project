@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="member">
+
+	<!-- mysql -->
+	<insert id="insertMember" parameterType="MemberVO">
+	INSERT INTO member(memberId, memberPass, memberName, memberNickname, memberTel, memberEmail, memberPostcode, memberAddr, memberGender, memberBirth) 
+	VALUES(#{memberId},#{memberPass},#{memberName},#{memberNickname},#{memberTel},#{memberEmail},#{memberPostcode},#{memberAddr},#{memberGender},#{memberBirth})
+	</insert>
+	
+</mapper>
