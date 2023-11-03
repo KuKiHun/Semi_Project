@@ -43,6 +43,25 @@
     </style>
 
 </head>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // 폼이 제출될 때 호출되는 함수
+            $("#memberFrm").submit(function (event) {
+                // 비밀번호와 비밀번호 확인 필드의 값을 가져옴
+                var password = $("#password").val();
+                var passcheck = $("#passcheck").val();
+
+                // 두 비밀번호가 일치하지 않으면 제출을 막음
+                if (password !== passcheck) {
+                    alert("비밀번호가 일치하지 않습니다.");
+                    event.preventDefault(); // 제출 막음
+                }
+            });
+        });
+    </script>
+
 <body class="animsition">
 	
 	<!-- Header -->
@@ -288,11 +307,11 @@
 						</h4>
 						<label>아이디</label>
 						<div class="bor8 m-b-20 how-pos4-parent" >
-							<input class="stext-111 cl2 plh3 size-116 p-l-20 p-r-20" type="text" name="id" id="id">
+							<input class="stext-111 cl2 plh3 size-116 p-l-20 p-r-20" type="text" name="memberId" id="id">
 						</div>
 						<label>비밀번호</label>
 						<div class="bor8 m-b-20 how-pos4-parent">
-							<input class="stext-111 cl2 plh3 size-116 p-l-20 p-r-20" type="password" name="password" id="password">
+							<input class="stext-111 cl2 plh3 size-116 p-l-20 p-r-20" type="password" name="memberPass" id="password">
 						</div>
 						<label>비밀번호 확인</label>
 						<div class="bor8 m-b-20 how-pos4-parent">
@@ -300,30 +319,30 @@
 						</div>
 						<label>이름</label>
 						<div class="bor8 m-b-20 how-pos4-parent" >
-							<input class="stext-111 cl2 plh3 size-116 p-l-20 p-r-20" type="text" name="name" id="name">
+							<input class="stext-111 cl2 plh3 size-116 p-l-20 p-r-20" type="text" name="memberName" id="name">
 						</div>
 						<label>성별</label>
 						<div style="display: flex; gap: 20px; margin-bottom: 20px; ">
-   							<input type="radio" name="gender" value="male" id="male">
+   							<input type="radio" name="memberGender" value="male" id="male">
    							<label for="male">남자</label>
 
-  						 	<input type="radio" name="gender" value="female" id="female">
+  						 	<input type="radio" name="memberGender" value="female" id="female">
   							<label for="female">여자</label>
 
    						</div>
 						<label>생년월일</label>
 						<div class="bor8 m-b-20 how-pos4-parent" >
-						<input type="date" id="datepicker" class="form-control" name="birth" value="" />
+						<input type="text" id="datepicker" class="form-control" name="memberBirth" value="" />
 							
 						</div>
 						<label>닉네임</label>
 						<div class="bor8 m-b-20 how-pos4-parent">
-							<input class="stext-111 cl2 plh3 size-116 p-l-20 p-r-20" type="text" name="nickname" id="nickname">
+							<input class="stext-111 cl2 plh3 size-116 p-l-20 p-r-20" type="text" name="memberNickname" id="nickname">
 						</div>
 						<label>전화번호</label>
 						<div class="bor8 m-b-20 how-pos4-parent">
 							
-								<input class="stext-111 cl2 plh3 size-116 p-l-20 p-r-20" id="tel" type="text" name="tel" placeholder="'-' 빼고 입력해주세요">
+								<input class="stext-111 cl2 plh3 size-116 p-l-20 p-r-20" id="tel" type="text" name="memberTel" placeholder="'-' 빼고 입력해주세요">
 							
 							
 								<button class="flex-c-m stext-120 cl0 size-126 bg3 bor1 hov-btn3 p-lr-1 trans-04 pointer">
@@ -334,7 +353,7 @@
 						<label>이메일</label>
 						<div class="bor8 m-b-20 how-pos4-parent">
 							
-								<input class="stext-111 cl2 plh3 size-116 p-l-20 p-r-20" type="email" name="email" id="email">
+								<input class="stext-111 cl2 plh3 size-116 p-l-20 p-r-20" type="email" name="memberEmail" id="email">
 						
 						
 								<button class="flex-c-m stext-120 cl0 size-126 bg3 bor1 hov-btn3 p-lr-1 trans-04 pointer">
@@ -344,12 +363,12 @@
 						</div>
 						<label>우편번호</label>
 						<div class="bor8 m-b-20 how-pos4-parent" style="width:150px;">
-								<input class="stext-111 cl2 plh3 size-116 p-l-20 p-r-20" type="text" name="postcode" id="postcode">
+								<input class="stext-111 cl2 plh3 size-116 p-l-20 p-r-20" type="text" name="memberPostcode" id="postcode">
 						</div>
 						
 						<label>주소</label>
 						<div class="bor8 m-b-20 how-pos4-parent">
-								<input class="stext-111 cl2 plh3 size-116 p-l-20 p-r-20" type="text" name="addr" id="addr">
+								<input class="stext-111 cl2 plh3 size-116 p-l-20 p-r-20" type="text" name="memberAddr" id="addr">
 								<button class="flex-c-m stext-120 cl0 size-126 bg3 bor1 hov-btn3 p-lr-1 trans-04 pointer">
 									주소 검색
 								</button>
@@ -357,7 +376,7 @@
 						
 						<label>상세주소</label>
 						<div class="bor8 m-b-20 how-pos4-parent">
-								<input class="stext-111 cl2 plh3 size-116 p-l-20 p-r-20" type="text" name="addr" id="addr">
+								<input class="stext-111 cl2 plh3 size-116 p-l-20 p-r-20" type="text" name="memberAddr" id="addr">
 						</div>
 
 						<button type="submit" id="signUpbtn" class="flex-c-m stext-101 cl0 size-121 bg3 bor1 hov-btn3 p-lr-15 trans-04 pointer" >
