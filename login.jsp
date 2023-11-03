@@ -77,6 +77,7 @@
 }
 </style>
 
+
 </head>
 <body class="animsition">
 
@@ -90,9 +91,10 @@
 					<div class="left-top-bar">Rent it, Wear it.</div>
 
 					<div class="right-top-bar flex-w h-full">
-						 <a href="login.jsp" class="flex-c-m trans-04 p-lr-25"> 로그인 </a>
-						 <a href="mypage.jsp" class="flex-c-m trans-04 p-lr-25"> 마이페이지 </a>
-					     <a href="#" class="flex-c-m trans-04 p-lr-25"> 고객센터 </a>						
+						<a href="#" class="flex-c-m trans-04 p-lr-25"> Help & FAQs </a> <a
+							href="login.jsp" class="flex-c-m trans-04 p-lr-25"> 로그인 </a> <a
+							href="mypage.jsp" class="flex-c-m trans-04 p-lr-25"> 마이페이지 </a> <a
+							href="#" class="flex-c-m trans-04 p-lr-25"> 고객센터 </a>
 					</div>
 				</div>
 			</div>
@@ -279,7 +281,7 @@
 	<!-- Title page -->
 	<section class="bg-img1 txt-center p-lr-15 p-tb-92" id="bgimage"
 		style="background-image: url('resources/images/bg-01.jpg');">
-		<h2 class="ltext-105 cl0 txt-center">로그인</h2>
+		<h2 class="ltext-105 cl0 txt-center">Login</h2>
 	</section>
 
 
@@ -290,7 +292,7 @@
 				<div
 					class="size-210 bor10 p-lr-70 p-t-55 p-b-70 p-lr-15-lg w-full-md">
 					<form>
-						<h4 class="mtext-105 cl2 txt-center p-b-30">로그인</h4>
+						<h4 class="mtext-105 cl2 txt-center p-b-30">Login</h4>
 
 
 						<div class="bor8 m-b-20 how-pos4-parent">
@@ -314,12 +316,11 @@
 
 						<button id="loginButton"
 							class="flex-c-m stext-101 cl0 size-121 bg3 bor hov-btn3 p-lr-15 trans-04 pointer"
-							src="index.jsp">로그인</button>
-
-						<div id="signupButton"
-							class="flex-c-m stext-101 cl0 size-121 bg3 bor hov-btn3 p-r-5 trans-04 pointer"
-							src="signUp.jsp">회원가입</div>
+							src="index.do">로그인</button>
 					</form>
+							<a href="signUp.do"> <button id="signupButton"
+								class="flex-c-m stext-101 cl0 size-121 bg3 bor hov-btn3 p-r-5 trans-04 pointer"
+								>회원가입</button> </a>
 				</div>
 
 				<div
@@ -366,16 +367,7 @@
 			</div>
 		</div>
 	</section>
-	<script>
-		// 버튼 요소를 찾아냅니다.
-		var signupButton = document.getElementById("signupButton");
-
-		// 버튼을 클릭할 때 페이지를 이동하도록 이벤트 리스너를 추가합니다.
-		signupButton.addEventListener("click", function() {
-			// 원하는 페이지 URL로 이동합니다.
-			window.location.href = "signUp.jsp";
-		});
-	</script>
+	
 
 	<!-- Map -->
 	<div class="map">
@@ -544,7 +536,7 @@
 	<!--===============================================================================================-->
 	<script
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKFWBqlKAGCeS1rMVoaNlwyayu0e0YRes"></script>
-	<script src="resources/js/map-custom.js"></script>
+	<script src="js/map-custom.js"></script>
 	<!--===============================================================================================-->
 	<script src="resources/js/main.js"></script>
 
