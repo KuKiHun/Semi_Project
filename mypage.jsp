@@ -72,22 +72,22 @@
 }
 
 .menu-container {
-	border: 1px solid #ccc;
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	max-width: 200px; /* 원하는 최대 너비로 조정 */
-	margin: 0;
-	justify-content: flex-start; /* 왼쪽 정렬로 변경 */
+	
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column; /* 메뉴 항목을 세로로 정렬 */
+    max-width: 200px; /* 원하는 최대 너비로 조정 */
+    margin-top: 20px;
+    justify-content: flex-start; /* 왼쪽 정렬으로 변경 */
 }
 
 .menu-item {
-	flex: 1;
-	text-align: left;
-	padding: 10px;
-	border-right: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
-	transition: background-color 0.3s; /* 부드러운 색상 전환을 위한 트랜지션 추가 */
+    flex: 1;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    transition: background-color 0.3s; /* 부드러운 색상 전환을 위한 트랜지션 추가 */
+    display: flex;
+    align-items: center; /* 텍스트를 가로로 가운데 정렬 */
 }
 
 .menu-item:hover {
@@ -108,9 +108,9 @@
 					<div class="left-top-bar">Rent it, Wear it</div>
 
 					<div class="right-top-bar flex-w h-full">
-						<a href="#" class="flex-c-m trans-04 p-lr-25"> Help & FAQs </a> <a
-							href="#" class="flex-c-m trans-04 p-lr-25"> 로그아웃 </a> <a
-							href="mypage.jsp" class="flex-c-m trans-04 p-lr-25"> 마이페이지 </a>
+						<a href="logout.jsp" class="flex-c-m trans-04 p-lr-25"> 로그아웃 </a>
+						<a href="mypage.jsp" class="flex-c-m trans-04 p-lr-25"> 마이페이지
+						</a> <a href="#" class="flex-c-m trans-04 p-lr-25"> 고객센터 </a>
 
 					</div>
 				</div>
@@ -139,7 +139,7 @@
 							<li class="label1" data-label1="hot"><a
 								href="shoping-cart.jsp">렌탈</a></li>
 
-							<li><a href="blog.jsp">룩북</a></li>
+							<li><a href="lookbook.jsp">룩북</a></li>
 
 							<li><a href="about.jsp">이용방법안내</a></li>
 
@@ -228,151 +228,88 @@
 		style="background-image: url('resources/images/bg-01.jpg');">
 		<h2 class="ltext-105 cl0 txt-center">마이페이지</h2>
 	</section>
+	
+	
+	
+	
 <body>
 	<div class="menu-container">
 		<div class="menu-item">
-			<a href="mypage2/rental_history.jsp">대여내역</a>
+			<a href="order_history.jsp">주문내역</a>
 		</div>
 		<div class="menu-item">
-			<a href="mypage2/purchase_history.jsp">구매내역</a>
-		</div>
-		<div class="menu-item">
-			<a href="mypage2/wishlist.jsp">위시리스트</a>
+			<a href="wishlist.jsp">위시리스트</a>
 		</div>
 		<div class="menu-item">
 			<a href="mypage2/payment_method_management.jsp">결제수단관리</a>
 		</div>
 		<div class="menu-item">
-			<a href="mypage2/product_inquiry.jsp">상품문의</a>
-		</div>
-		<div class="menu-item">
-			<a href="mypage2/my_wearit_style.jsp">나의 웨어릿 스타일</a>
-		</div>
-		<div class="menu-item">
-			<a href="mypage2/update_personal_info.jsp">개인정보수정</a>
-		</div>
-		<div class="menu-item">
-			<a href="mypage2/membership_cancellation.jsp">멤버십 해지</a>
-		</div>
-		<div class="menu-item">
-			<a href="mypage2/membership_withdrawal.jsp">회원탈퇴</a>
+			<a href="update_personal_info.jsp">개인정보수정</a>
 		</div>
 	</div>
-</body>
 
-<!-- Load more -->
-<div class="flex-c-m flex-w w-full p-t-45">
-	<a href="#"
-		class="flex-c-m stext-101 cl5 size-103 bg2 bor1 hov-btn1 p-lr-15 trans-04">
-		Load More </a>
-</div>
 
-<!-- Footer -->
-<footer class="bg3 p-t-75 p-b-32">
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-6 col-lg-3 p-b-50">
-				<h4 class="stext-301 cl0 p-b-30">Categories</h4>
+	<!-- 마이페이지 홈 & 주문내역 (마이페이지 들어가면 주문내역 바로 나오게) -->
 
-				<ul>
-					<li class="p-b-10"><a href="#"
-						class="stext-107 cl7 hov-cl1 trans-04"> Women </a></li>
+	<div class="row isotope-grid">
+		<div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
+			<!-- Block2 -->
+			
+			<div class="block2">
+				<div class="block2-pic hov-img0">
+					<img src="resources/images/mypage-01.jpg" alt="IMG-PRODUCT">
+				</div>
 
-					<li class="p-b-10"><a href="#"
-						class="stext-107 cl7 hov-cl1 trans-04"> Men </a></li>
-
-					<li class="p-b-10"><a href="#"
-						class="stext-107 cl7 hov-cl1 trans-04"> Shoes </a></li>
-
-					<li class="p-b-10"><a href="#"
-						class="stext-107 cl7 hov-cl1 trans-04"> Watches </a></li>
-				</ul>
 			</div>
+		</div>
 
-			<div class="col-sm-6 col-lg-3 p-b-50">
-				<h4 class="stext-301 cl0 p-b-30">Help</h4>
+		<div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
+			<!-- Block2 -->
+			<div class="block2-txt-child1 flex-col-l ">대여내역 페이지</div>
+			<div class="block2">
+				<div class="block2-pic hov-img0">
+					<img src="resources/images/mypage-01.jpg" alt="IMG-PRODUCT">
 
-				<ul>
-					<li class="p-b-10"><a href="#"
-						class="stext-107 cl7 hov-cl1 trans-04"> Track Order </a></li>
+					<a href="mypage2/rental_history.jsp"
+						class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+						대여내역 </a>
+				</div>
 
-					<li class="p-b-10"><a href="#"
-						class="stext-107 cl7 hov-cl1 trans-04"> Returns </a></li>
+				<div class="block2-txt flex-w flex-t p-t-14">				
 
-					<li class="p-b-10"><a href="#"
-						class="stext-107 cl7 hov-cl1 trans-04"> Shipping </a></li>
-
-					<li class="p-b-10"><a href="#"
-						class="stext-107 cl7 hov-cl1 trans-04"> FAQs </a></li>
-				</ul>
-			</div>
-
-			<div class="col-sm-6 col-lg-3 p-b-50">
-				<h4 class="stext-301 cl0 p-b-30">GET IN TOUCH</h4>
-
-				<p class="stext-107 cl7 size-201">Any questions? Let us know in
-					store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on
-					(+1) 96 716 6879</p>
-
-				<div class="p-t-27">
-					<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16"> <i
-						class="fa fa-facebook"></i>
-					</a> <a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16"> <i
-						class="fa fa-instagram"></i>
-					</a> <a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16"> <i
-						class="fa fa-pinterest-p"></i>
-					</a>
+					<div class="block2-txt-child2 flex-r p-t-3">
+						<a href="#"
+							class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+						</a>
+					</div>
 				</div>
 			</div>
+		</div>
+		<div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item men">
+			<!-- Block2 -->
+			<div class="block2-txt-child1 flex-col-l ">구매내역 페이지</div>
+			<div class="block2">
+				<div class="block2-pic hov-img0">
+					<img src="resources/images/mypage-02.jpg" alt="IMG-PRODUCT">
 
-			<div class="col-sm-6 col-lg-3 p-b-50">
-				<h4 class="stext-301 cl0 p-b-30">Newsletter</h4>
+					<a href="mypage2/purchase_history.jsp"
+						class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+						구매내역 </a>
+				</div>
 
-				<form>
-					<div class="wrap-input1 w-full p-b-4">
-						<input class="input1 bg-none plh1 stext-107 cl7" type="text"
-							name="email" placeholder="email@example.com">
-						<div class="focus-input1 trans-04"></div>
+				<div class="block2-txt flex-w flex-t p-t-14">
+					
+
+					<div class="block2-txt-child2 flex-r p-t-3">
+						<a href="#"
+							class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+						</a>
 					</div>
-
-					<div class="p-t-18">
-						<button
-							class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04">
-							Subscribe</button>
-					</div>
-				</form>
+				</div>
 			</div>
 		</div>
+</body>
 
-		<div class="p-t-40">
-			<div class="flex-c-m flex-w p-b-18">
-				<a href="#" class="m-all-1"> <img
-					src="resources/images/icons/icon-pay-01.png" alt="ICON-PAY">
-				</a> <a href="#" class="m-all-1"> <img
-					src="resources/images/icons/icon-pay-02.png" alt="ICON-PAY">
-				</a> <a href="#" class="m-all-1"> <img
-					src="resources/images/icons/icon-pay-03.png" alt="ICON-PAY">
-				</a> <a href="#" class="m-all-1"> <img
-					src="resources/images/icons/icon-pay-04.png" alt="ICON-PAY">
-				</a> <a href="#" class="m-all-1"> <img
-					src="resources/images/icons/icon-pay-05.png" alt="ICON-PAY">
-				</a>
-			</div>
-
-			<p class="stext-107 cl6 txt-center">
-				<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-				Copyright &copy;
-				<script>document.write(new Date().getFullYear());</script>
-				All rights reserved | Made with <i class="fa fa-heart-o"
-					aria-hidden="true"></i> by <a href="https://colorlib.com"
-					target="_blank">Colorlib</a> &amp; distributed by <a
-					href="https://themewagon.com" target="_blank">ThemeWagon</a>
-				<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-
-			</p>
-		</div>
-	</div>
-</footer>
 
 
 <!-- Back to top -->
@@ -391,7 +328,7 @@
 			<button class="how-pos3 hov3 trans-04 js-hide-modal1">
 				<img src="resources/images/icons/icon-close.png" alt="CLOSE">
 			</button>
-
+			리스트1
 			<div class="row">
 				<div class="col-md-6 col-lg-7 p-b-30">
 					<div class="p-l-25 p-r-30 p-lr-0-lg">
@@ -413,7 +350,7 @@
 								</div>
 
 								<div class="item-slick3"
-									data-thumb="resources/images/product-detail-02.jpg">
+									data-thumb="resources/images/product-detail-02.jpg">리스트2
 									<div class="wrap-pic-w pos-relative">
 										<img src="resources/images/product-detail-02.jpg"
 											alt="IMG-PRODUCT"> <a
