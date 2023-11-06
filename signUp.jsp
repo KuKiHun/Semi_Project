@@ -1,7 +1,10 @@
-<%@ page contentType = "text/html;charset=utf-8" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="java.util.*" %>
+
+<% request.setCharacterEncoding("UTF-8"); %>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
 	<title>Contact</title>
 	<meta charset="UTF-8">
@@ -45,22 +48,182 @@
 </head>
 
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            // 폼이 제출될 때 호출되는 함수
-            $("#memberFrm").submit(function (event) {
-                // 비밀번호와 비밀번호 확인 필드의 값을 가져옴
-                var password = $("#password").val();
-                var passcheck = $("#passcheck").val();
+<script>
+  $(document).ready(function () {
+    // 폼이 제출될 때 호출되는 함수
+    $("#memberFrm").submit(function (event) {
+      // 비밀번호와 비밀번호 확인 필드의 값을 가져옴
+      var password = $("#password").val();
+      var passcheck = $("#passcheck").val();
 
-                // 두 비밀번호가 일치하지 않으면 제출을 막음
-                if (password !== passcheck) {
-                    alert("비밀번호가 일치하지 않습니다.");
-                    event.preventDefault(); // 제출 막음
-                }
-            });
-        });
-    </script>
+      // 두 비밀번호가 일치하지 않으면 제출을 막음
+      if (password !== passcheck) {
+        alert("비밀번호가 일치하지 않습니다.");
+        event.preventDefault(); // 제출 막음
+      }
+
+      // 성별 선택 여부 확인
+      if (!$("input[name='memberGender']:checked").val()) {
+        alert("성별을 선택해주세요.");
+        event.preventDefault(); // 제출 막음
+      }
+
+      // 생년월일 선택 여부 확인
+      var birthDate = $("#datepicker").val();
+      if (!birthDate) {
+        alert("생년월일을 선택해주세요.");
+        event.preventDefault(); // 제출 막음
+      } else if (new Date(birthDate) > new Date()) {
+        alert("올바른 생년월일을 선택해주세요.");
+        event.preventDefault(); // 제출 막음
+      }
+    });
+
+    // datepicker 설정
+    $("#datepicker").datepicker({
+      maxDate: '0', // 현재 날짜까지만 선택 가능하도록 설정
+      yearRange: '1900:' + (new Date).getFullYear() // 과거의 날짜만 선택 가능하도록 설정
+    });
+  });
+</script>
+<script>
+  function validateForm() {
+    // 아이디, 비밀번호, 이름에 대한 유효성 검사 수행
+	  return (
+		      validateId() &&
+		      validatePassword() &&
+		      validateName() &&
+		      validateNickname() &&
+		      validateAddress() &&
+		      validateDetailAddress() &&
+		      validatePostcode() &&
+		      validateTel() &&
+		      validateBirth()
+		    );
+		  }
+
+  function validateId() {
+    var id = $("#id").val();
+    var idError = $("#idError");
+
+    // 아이디는 영어와 숫자를 포함하여 30자 이하여야 함
+    var idRegex = /^[a-zA-Z0-9]{1,30}$/;
+
+    if (!idRegex.test(id)) {
+      alert("아이디는 영어나 숫자를 사용하여 30자 이하로 작성해야 합니다.");
+      return false;
+    } else {
+      return true;
+  }
+}
+
+  function validatePassword() {
+    var password = $("#password").val();
+    var passwordError = $("#passwordError");
+
+    // 비밀번호는 영어, 숫자, 특수문자를 포함하여 8자 이상 30자 이하여야 함
+    var passwordRegex = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,30}$/;
+
+    if (!passwordRegex.test(password)) {
+    	alert("비밀번호는 영어, 숫자, 특수문자를 조합하여 8자 이상 30자 이하로 작성해야 합니다.");
+        return false;
+      } else {
+        return true;
+    }
+  }
+
+  function validateName() {
+    var name = $("#name").val();
+    var nameError = $("#nameError");
+
+    // 이름은 한글만 가능하고 30자 이하여야 함
+    var nameRegex = /^[가-힣]{1,30}$/;
+
+    if (!nameRegex.test(name)) {
+      alert("이름은 한글만 입력하여 30자 이하로 작성해야 합니다.");
+      return false;
+    } else {
+      return true;
+  }
+}
+  
+  function validateNickname() {
+	    var nickname = $("#nickname").val();
+	    var nicknameError = $("#nicknameError");
+
+	    // 닉네임은 한글, 영어, 숫자를 포함하여 20자 이하여야 함
+	    var nicknameRegex = /^[가-힣a-zA-Z0-9]{1,20}$/;
+
+	    if (!nicknameRegex.test(nickname)) {
+	      alert("닉네임은 한글이나 영어, 숫자를 사용하여 20자 이하로 작성해야 합니다.");
+	      return false;
+	    } else {
+	      return true;
+	    }
+	  }
+
+  function validateTel() {
+    var tel = $("#tel").val();
+    var telError = $("#telError");
+
+    // 전화번호는 숫자만 포함하여 30자 이하여야 함
+    var telRegex = /^[0-9]{1,30}$/;
+
+    if (!telRegex.test(tel)) {
+      alert("전화번호는 숫자만 사용하여 30자 이하로 작성해야 합니다.");
+      return false;
+    } else {
+      return true;
+    }
+  }
+
+  function validatePostcode() {
+	    var postcode = $("#postcode").val();
+	    var postcodeError = $("#postcodeError");
+
+	    // 우편번호는 숫자만 포함하여 10자 이하여야 함
+	    var postcodeRegex = /^[0-9]{1,10}$/;
+
+	    if (!postcodeRegex.test(postcode)) {
+	      alert("우편번호는 숫자만 사용하여 10자 이하로 작성해야 합니다.");
+	      return false;
+	    } else {
+	      return true;
+	    }
+	  }
+
+	  function validateAddress() {
+	    var address = $("#addr").val();
+	    var addressError = $("#addrError");
+
+	    // 주소는 한글과 숫자만 포함하여 255자 이하여야 함
+	    var addressRegex = /^[가-힣0-9\s]{1,255}$/;
+
+	    if (!addressRegex.test(address)) {
+	      alert("주소는 한글이나 숫자만 사용하여 255자 이하로 작성해야 합니다.");
+	      return false;
+	    } else {
+	      return true;
+	    }
+	  }
+
+	  function validateDetailAddress() {
+	    var detailAddress = $("#detailAddr").val();
+	    var detailAddressError = $("#detailAddrError");
+
+	    // 상세주소는 한글, 영어, 숫자만 포함하여 255자 이하여야 함
+	    var detailAddressRegex = /^[가-힣a-zA-Z0-9\s]{1,255}$/;
+
+	    if (!detailAddressRegex.test(detailAddress)) {
+	      alert("상세주소는 한글이나 영어, 숫자를 사용하여 255자 이하로 작성해야 합니다.");
+	      return false;
+	    } else {
+	      return true;
+	    }
+	  }
+	  
+</script>
+
 
 <body class="animsition">
 	
@@ -107,32 +270,32 @@
 					<div class="menu-desktop">
 						<ul class="main-menu">
 							<li class="active-menu">
-								<a href="index.jsp">Home</a>
+								<a href="index.do">Home</a>
 								<ul class="sub-menu">
-									<li><a href="index.jsp">Homepage 1</a></li>
-									<li><a href="home-02.jsp">Homepage 2</a></li>
-									<li><a href="home-03.jsp">Homepage 3</a></li>
+									<li><a href="index.do">Homepage 1</a></li>
+									<li><a href="home-02.do">Homepage 2</a></li>
+									<li><a href="home-03.do">Homepage 3</a></li>
 								</ul>
 							</li>
 
 							<li>
-								<a href="product.jsp">구매</a>
+								<a href="product.do">구매</a>
 							</li>
 
 							<li class="label1" data-label1="hot">
-								<a href="shoping-cart.jsp">렌탈</a>
+								<a href="shoping-cart.do">렌탈</a>
 							</li>
 
 							<li>
-								<a href="lookbook.jsp">룩북</a>
+								<a href="lookbook.do">룩북</a>
 							</li>
 
 							<li>
-								<a href="about.jsp">이용방법안내</a>
+								<a href="about.do">이용방법안내</a>
 							</li>
 
 							<li>
-								<a href="contact.jsp">커뮤니티 </a>
+								<a href="contact.do">커뮤니티 </a>
 							</li>
 						</ul>
 					</div>	
@@ -159,7 +322,7 @@
 		<div class="wrap-header-mobile">
 			<!-- Logo moblie -->		
 			<div class="logo-mobile">
-				<a href="index.jsp"><img src="resources/images/icons/logo-01.png" alt="IMG-LOGO"></a>
+				<a href="index.do"><img src="resources/images/icons/logo-01.png" alt="IMG-LOGO"></a>
 			</div>
 
 			<!-- Icon header -->
@@ -276,11 +439,11 @@
 					</div>
 
 					<div class="header-cart-buttons flex-w w-full">
-						<a href="shoping-cart.jsp" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
+						<a href="shoping-cart.do" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
 							View Cart
 						</a>
 
-						<a href="shoping-cart.jsp" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
+						<a href="shoping-cart.do" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
 							Check Out
 						</a>
 					</div>
@@ -301,7 +464,7 @@
 	<!-- Content page -->
 	<section class="bg0 p-t-104 p-b-116 section-1" >
 				<div class="size-210 bor10 p-lr-70 p-t-55 p-b-70 p-lr-15-lg w-full-md" style="max-width:800px;">
-					<form method="post" action="memberInsert.do" name="memberinput" id="memberFrm" >
+					<form method="post" action="memberInsert.do" name="memberinput" id="memberFrm" onsubmit="return validateForm()">
 						<h4 class="mtext-115 cl2 txt-center p-b-30">
 							회원가입
 						</h4>
